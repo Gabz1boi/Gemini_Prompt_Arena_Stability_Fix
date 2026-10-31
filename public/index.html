@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fc">
+  <meta name="description" content="Gemini Prompt Arena - kompetisi penyusunan prompt dengan evaluasi AI. Hosted by Gabriel Ignasius Sinaga.">
+  <title>Gemini Prompt Arena | Gabriel Ignasius Sinaga</title>
+  <link rel="icon" href="/assets/gemini-spark.png">
+  <link rel="stylesheet" href="/styles.css?v=4">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" data-view="dashboard" aria-label="Gemini Prompt Arena">
+        <span class="brand-mark"><img src="/assets/gemini-spark.png" alt=""></span>
+        <span><strong>prompt<span class="brand-blue">arena</span></strong><small>GEMINI ACADEMY · IT DEL</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="side-nav">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span> Overview</button>
+        <button class="nav-item" data-view="leaderboard"><span class="nav-icon">▤</span> Scoreboard</button>
+      </nav>
+      <div class="side-label side-label-spaced">THE CHALLENGE</div>
+      <div class="side-rounds">
+        <button class="side-round" data-round="simplify"><span class="mini-dot dot-blue">01</span><span><b>Simplify Topik</b><small>Explain it clearly</small></span><span class="side-chevron">›</span></button>
+        <button class="side-round" data-round="summarize"><span class="mini-dot dot-green">02</span><span><b>Summarize Modul</b><small>Find the key ideas</small></span><span class="side-chevron">›</span></button>
+        <button class="side-round" data-round="roleplay"><span class="mini-dot dot-purple">03</span><span><b>Roleplay Tutor</b><small>Make learning interactive</small></span><span class="side-chevron">›</span></button>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="api-status" id="apiStatus"><span class="status-indicator"></span><span><b>Gemini Evaluator</b><small>Memeriksa koneksi…</small></span></div>
+        <div class="sidebar-note">Prompt-only evaluation.<br><b>Hosted by Gabriel Ignasius Sinaga</b></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="crumb"><span>Workspace</span><i>/</i><b id="crumbCurrent">Overview</b></div>
+        <div class="top-actions">
+          <span class="live-chip"><span></span> AI EVALUATION</span>
+          <button class="profile-chip" id="profileChip" title="Pilih peserta"><span class="avatar" id="avatarText">G</span><span id="profileName">Belum mendaftar</span><span class="chev">⌄</span></button>
+        </div>
+      </header>
+      <section id="viewRoot" class="view-root" aria-live="polite"></section>
+      <footer class="main-footer">
+        <span>GEMINI PROMPT ARENA <span class="footer-sep">/</span> GSA INSTITUT TEKNOLOGI DEL</span>
+        <span>Hosted by Gabriel Ignasius Sinaga · AI-assisted scoring</span>
+      </footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js?v=4"></script>
+</body>
+</html>

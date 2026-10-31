@@ -1,0 +1,7 @@
+GEMINI PROMPT ARENA
+VERSION: 3.1.0
+MODE: PROMPT-ONLY
+HOST: Gabriel Ignasius Sinaga
+SUBMISSION: one prompt textarea per round; no Gemini answer/source/transcript fields.
+RESILIENCE: up to 4 automatic Gemini API attempts with exponential backoff + jitter for transient 408/429/5xx errors.
+DRAFT SAFETY: prompt draft is retained after a temporary API failure and can be retried without retyping.

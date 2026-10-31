@@ -1,0 +1,12 @@
+{
+  "name": "gemini-prompt-arena",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Gemini-powered prompt-only evaluator for a three-round academic prompting challenge.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

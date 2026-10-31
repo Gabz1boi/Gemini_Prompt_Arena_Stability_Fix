@@ -1,0 +1,42 @@
+{
+  "project": "Gemini Prompt Arena",
+  "version": "3.1.0",
+  "host": "Gabriel Ignasius Sinaga",
+  "submission_mode": "prompt_only",
+  "participant_fields": [
+    "name",
+    "nim"
+  ],
+  "rounds": [
+    "Simplify Topik",
+    "Summarize Modul",
+    "Roleplay Tutor"
+  ],
+  "scoring": {
+    "prompt": 100,
+    "final_score": "average of three round scores",
+    "criteria": "seven criteria per round; weights total 100"
+  },
+  "gemini_api": {
+    "endpoint": "models.generateContent",
+    "model_default": "gemini-3.8-flash",
+    "only_prompt_sent_for_evaluation": true,
+    "participant_name_and_nim_sent_to_gemini": false,
+    "api_key_storage": "server-side .env"
+  },
+  "participant_storage": "browser localStorage",
+  "host_attribution_location": "Google Student Ambassador · Academic Prompting hero badge",
+  "api_resilience": {
+    "automatic_attempts": 4,
+    "retryable_statuses": [
+      408,
+      429,
+      500,
+      502,
+      503,
+      504
+    ],
+    "strategy": "exponential backoff with jitter and Retry-After support",
+    "preserve_prompt_draft_on_failure": true
+  }
+}
